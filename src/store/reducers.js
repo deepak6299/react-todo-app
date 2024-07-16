@@ -1,10 +1,12 @@
 // src/store/reducers.js
 import { ADD_TASK, DELETE_TASK, EDIT_TASK } from './actions';
 
+// Initial state
 const initialState = {
     tasks: [],
 };
 
+// Reducer function to handle task-related actions
 const taskReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_TASK:

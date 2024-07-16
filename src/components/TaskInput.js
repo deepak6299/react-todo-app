@@ -3,14 +3,18 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addTask } from '../store/actions';
 
+
+// TaskInput component for adding a new task
 const TaskInput = () => {
     const [task, setTask] = useState('');
     const dispatch = useDispatch();
 
+
+    // Function to handle adding a new task
     const handleAddTask = () => {
         if (task) {
             dispatch(addTask({ id: Date.now(), task }));
-            setTask('');
+            setTask(''); // Clear the input field
         }
     };
 
